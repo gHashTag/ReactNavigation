@@ -29,7 +29,7 @@ const MyHomeScreen = ({ navigation }) => (
 );
 
 MyHomeScreen.navigationOptions = {
-  tabBarLabel: 'Home',
+  tabBarLabel: 'Кто мы?',
   tabBarIcon: ({ tintColor, focused }) => (
     <Ionicons
       name={focused ? 'ios-home' : 'ios-home-outline'}
@@ -39,12 +39,12 @@ MyHomeScreen.navigationOptions = {
   ),
 };
 
-const MyPeopleScreen = ({ navigation }) => (
+const MyTicketScreen = ({ navigation }) => (
   <MyNavScreen banner="People Tab" navigation={navigation} />
 );
 
-MyPeopleScreen.navigationOptions = {
-  tabBarLabel: 'People',
+MyTicketScreen.navigationOptions = {
+ tabBarLabel: 'Билет',
   tabBarIcon: ({ tintColor, focused }) => (
     <Ionicons
       name={focused ? 'ios-people' : 'ios-people-outline'}
@@ -54,30 +54,15 @@ MyPeopleScreen.navigationOptions = {
   ),
 };
 
-const MyChatScreen = ({ navigation }) => (
+const MyLibraryScreen = ({ navigation }) => (
   <MyNavScreen banner="Chat Tab" navigation={navigation} />
 );
 
-MyChatScreen.navigationOptions = {
-  tabBarLabel: 'Chat',
+MyLibraryScreen.navigationOptions = {
+ tabBarLabel: 'Библиотека',
   tabBarIcon: ({ tintColor, focused }) => (
     <Ionicons
       name={focused ? 'ios-chatboxes' : 'ios-chatboxes-outline'}
-      size={26}
-      style={{ color: tintColor }}
-    />
-  ),
-};
-
-const MySettingsScreen = ({ navigation }) => (
-  <MyNavScreen banner="Settings Tab" navigation={navigation} />
-);
-
-MySettingsScreen.navigationOptions = {
-  tabBarLabel: 'Settings',
-  tabBarIcon: ({ tintColor, focused }) => (
-    <Ionicons
-      name={focused ? 'ios-settings' : 'ios-settings-outline'}
       size={26}
       style={{ color: tintColor }}
     />
@@ -90,17 +75,13 @@ const RoutingTabs = TabNavigator(
       screen: MyHomeScreen,
       path: '',
     },
-    People: {
-      screen: MyPeopleScreen,
-      path: 'cart',
+    Ticket: {
+      screen: MyTicketScreen,
+      path: 'ticket',
     },
-    Chat: {
-      screen: MyChatScreen,
-      path: 'chat',
-    },
-    Settings: {
-      screen: MySettingsScreen,
-      path: 'settings',
+    Library: {
+      screen: MyLibraryScreen,
+      path: 'library',
     },
   },
   {
