@@ -7,8 +7,9 @@ import { Button, Platform, ScrollView, StyleSheet } from 'react-native';
 import { TabNavigator } from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import SampleText from './SampleText';
-import We from './tab/tab1/we.js'
-import Ticket from './tab/tab2/ticket.js'
+import WeStack from './tab/tab1/weStack.js'
+import TicketStack from './tab/tab2/ticketStack.js'
+import LibraryStack from './tab/tab3/libraryStack.js'
 
 const MyNavScreen = ({ navigation, banner }) => (
   <ScrollView style={styles.container}>
@@ -26,7 +27,7 @@ const MyNavScreen = ({ navigation, banner }) => (
 );
 
 const MyHomeScreen = ({ navigation }) => (
-  <We />
+  <WeStack />
 );
 
 MyHomeScreen.navigationOptions = {
@@ -41,7 +42,7 @@ MyHomeScreen.navigationOptions = {
 };
 
 const MyTicketScreen = ({ navigation }) => (
-  <Ticket />
+  <TicketStack />
 );
 
 MyTicketScreen.navigationOptions = {
@@ -56,7 +57,7 @@ MyTicketScreen.navigationOptions = {
 };
 
 const MyLibraryScreen = ({ navigation }) => (
-  <MyNavScreen banner="Chat Tab" navigation={navigation} />
+  <LibraryStack />
 );
 
 MyLibraryScreen.navigationOptions = {

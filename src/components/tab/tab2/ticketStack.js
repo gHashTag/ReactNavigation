@@ -1,12 +1,11 @@
-import {StackNavigator} from 'react-navigation'
-import ContactList from './contact.list.js'
-import ContactDetails from './contact.details.js'
+import { StackNavigator } from 'react-navigation'
+import TimePad from './timepad.js'
 
-const We = StackNavigator({
-  Home: { screen: ContactList },
-  ContactDetails: { screen: ContactDetails }
+const TicketStack = StackNavigator({
+  Home: { screen: TimePad }
 }, {
     navigationOptions: {
+        title: 'Билет',
         headerStyle: {
             backgroundColor: '#fff'
         },
@@ -24,4 +23,4 @@ const We = StackNavigator({
     }
 });
 
-export default We
+export default TicketStack
