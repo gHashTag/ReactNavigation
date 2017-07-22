@@ -7,7 +7,8 @@ import { Button, Platform, ScrollView, StyleSheet } from 'react-native';
 import { TabNavigator } from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import SampleText from './SampleText';
-import Tab1 from './tab/tab1/tab1.js'
+import We from './tab/tab1/we.js'
+import Ticket from './tab/tab2/ticket.js'
 
 const MyNavScreen = ({ navigation, banner }) => (
   <ScrollView style={styles.container}>
@@ -25,7 +26,7 @@ const MyNavScreen = ({ navigation, banner }) => (
 );
 
 const MyHomeScreen = ({ navigation }) => (
-  <Tab1 />
+  <We />
 );
 
 MyHomeScreen.navigationOptions = {
@@ -40,7 +41,7 @@ MyHomeScreen.navigationOptions = {
 };
 
 const MyTicketScreen = ({ navigation }) => (
-  <MyNavScreen banner="People Tab" navigation={navigation} />
+  <Ticket />
 );
 
 MyTicketScreen.navigationOptions = {
@@ -86,7 +87,7 @@ const RoutingTabs = TabNavigator(
   },
   {
     tabBarOptions: {
-      activeTintColor: Platform.OS === 'ios' ? '#e91e63' : '#fff',
+      activeTintColor: Platform.OS === 'ios' ? '#BF813E' : '#fff',
     },
   }
 );
