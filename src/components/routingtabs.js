@@ -6,25 +6,9 @@ import React from 'react';
 import { Button, Platform, ScrollView, StyleSheet } from 'react-native';
 import { TabNavigator } from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import SampleText from './SampleText';
 import WeStack from './tab/tab1/weStack.js'
 import TicketStack from './tab/tab2/ticketStack.js'
 import LibraryStack from './tab/tab3/libraryStack.js'
-
-const MyNavScreen = ({ navigation, banner }) => (
-  <ScrollView style={styles.container}>
-    <SampleText>{banner}</SampleText>
-    <Button
-      onPress={() => navigation.navigate('Home')}
-      title="Go to home tab"
-    />
-    <Button
-      onPress={() => navigation.navigate('Settings')}
-      title="Go to settings tab"
-    />
-    <Button onPress={() => navigation.goBack(null)} title="Go back" />
-  </ScrollView>
-);
 
 const MyHomeScreen = ({ navigation }) => (
   <WeStack />
@@ -34,7 +18,7 @@ MyHomeScreen.navigationOptions = {
   tabBarLabel: 'Кто мы?',
   tabBarIcon: ({ tintColor, focused }) => (
     <Ionicons
-      name={focused ? 'ios-home' : 'ios-home-outline'}
+      name={focused ? 'ios-planet' : 'ios-planet-outline'}
       size={26}
       style={{ color: tintColor }}
     />
@@ -49,7 +33,7 @@ MyTicketScreen.navigationOptions = {
  tabBarLabel: 'Билет',
   tabBarIcon: ({ tintColor, focused }) => (
     <Ionicons
-      name={focused ? 'ios-people' : 'ios-people-outline'}
+      name={focused ? 'ios-key' : 'ios-key-outline'}
       size={26}
       style={{ color: tintColor }}
     />
@@ -64,7 +48,7 @@ MyLibraryScreen.navigationOptions = {
  tabBarLabel: 'Библиотека',
   tabBarIcon: ({ tintColor, focused }) => (
     <Ionicons
-      name={focused ? 'ios-chatboxes' : 'ios-chatboxes-outline'}
+      name={focused ? 'ios-bookmarks' : 'ios-bookmarks-outline'}
       size={26}
       style={{ color: tintColor }}
     />
@@ -100,5 +84,3 @@ const styles = StyleSheet.create({
 });
 
 export default RoutingTabs;
-
-
