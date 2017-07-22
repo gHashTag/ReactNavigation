@@ -74,6 +74,7 @@ const RoutingTabs = TabNavigator(
     tabBarOptions: {
       activeTintColor: Platform.OS === 'ios' ? '#BF813E' : '#fff',
     },
+   initialRouteName: 'Library'
   }
 );
 
