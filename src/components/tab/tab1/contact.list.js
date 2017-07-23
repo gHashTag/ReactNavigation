@@ -47,7 +47,7 @@ export default class ContectList extends Component {
     this.fetchUsers()
   }
   fetchUsers(){
-   fetch('https://firebasestorage.googleapis.com/v0/b/shaktimams.appspot.com/o/shakti.json?alt=media&token=e8e34bbb-b0b8-4aa8-9f8a-8474bd738b70')
+   fetch('https://api.backendless.com/F9B3E486-9DA0-E127-FF44-208D03827200/8B9A3030-C8BB-1149-FFCB-26E84A927F00/files/media/shakti.json')
       .then((res) => res.json())
       .then((res) => {
         this.setState({
