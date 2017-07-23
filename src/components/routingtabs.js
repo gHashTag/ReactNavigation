@@ -8,7 +8,7 @@ import { TabNavigator } from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import WeStack from './tab/tab1/weStack.js'
 import TicketStack from './tab/tab2/ticketStack.js'
-import LibraryStack from './tab/tab3/libraryStack.js'
+import GemsStack from './tab/tab3/gemsStack.js'
 
 const MyHomeScreen = ({ navigation }) => (
   <WeStack />
@@ -40,12 +40,12 @@ MyTicketScreen.navigationOptions = {
   ),
 };
 
-const MyLibraryScreen = ({ navigation }) => (
-  <LibraryStack />
+const MyGemsScreen = ({ navigation }) => (
+  <GemsStack />
 );
 
-MyLibraryScreen.navigationOptions = {
- tabBarLabel: 'Библиотека',
+MyGemsScreen.navigationOptions = {
+ tabBarLabel: 'Сокровища',
   tabBarIcon: ({ tintColor, focused }) => (
     <Ionicons
       name={focused ? 'ios-bookmarks' : 'ios-bookmarks-outline'}
@@ -65,16 +65,16 @@ const RoutingTabs = TabNavigator(
       screen: MyTicketScreen,
       path: 'ticket',
     },
-    Library: {
-      screen: MyLibraryScreen,
-      path: 'library',
+    Gems: {
+      screen: MyGemsScreen,
+      path: 'gems',
     },
   },
   {
     tabBarOptions: {
       activeTintColor: Platform.OS === 'ios' ? '#BF813E' : '#fff',
     },
-   initialRouteName: 'Library'
+   initialRouteName: 'Gems',
   }
 );
 

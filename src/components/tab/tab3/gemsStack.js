@@ -2,13 +2,13 @@ import React from 'react';
 import { Button, ScrollView } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-import Library from './library.js'
+import Gems from './gems.js'
 
 const MyNavScreen = ({ navigation, banner }) => (
   <ScrollView>
     <Button
       onPress={() => navigation.navigate('Photos')}
-      title="Go to a photos screen"
+      title="Leela Game"
     />
   </ScrollView>
 );
@@ -18,23 +18,23 @@ const MyHomeScreen = ({ navigation }) => (
 );
 
 MyHomeScreen.navigationOptions = {
- title: 'Библиотека',
+ title: 'Сокровища',
 };
 
-const MyLibraryScreen = ({ navigation }) => (
-  <Library />
+const MyGemsScreen = ({ navigation }) => (
+  <Gems />
 );
-MyLibraryScreen.navigationOptions = {
+MyGemsScreen.navigationOptions = {
   title: 'Photos',
 };
 
 
-const LibraryStack = StackNavigator({
+const GemsStack = StackNavigator({
   Home: {
     screen: MyHomeScreen,
   },
   Photos: {
-    screen: MyLibraryScreen,
+    screen: MyGemsScreen,
   },
 }, {
     navigationOptions: {
@@ -56,4 +56,4 @@ const LibraryStack = StackNavigator({
     }
 });
 
-export default LibraryStack;
+export default GemsStack;

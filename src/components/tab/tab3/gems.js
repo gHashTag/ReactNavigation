@@ -5,7 +5,7 @@ import {
   View
 } from 'react-native';
 
-export default class Library extends Component {
+export default class Gems extends Component {
   render() {
     return (
       <View style={styles.container}>
